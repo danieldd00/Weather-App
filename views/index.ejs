@@ -1,0 +1,83 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App v1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+  </head>
+  <body>
+    <section class="weatherForm">
+      <form class="weather-zip-input" action="/search" method="post">
+        <input
+          class="zip-code-input"
+          type="text"
+          name="search"
+          id="zip-code"
+          placeholder="Zip Code"
+        />
+        <input class="tempBtn" id="get" type="submit" value="Submit" />
+      </form>
+
+      <div class="weather-data">
+        <div class="city-info">
+          <div class="city-name">
+            <p><%= cityName %></p>
+          </div>
+          <div class="lat-info">
+            <p>Lat: <%= latitude %></p>
+          </div>
+          <div class="lon-info">
+            <p>Lon: <%= longitude %></p>
+          </div>
+        </div>
+        <div class="temp-info">
+          <div class="main-temp">
+            <h2><%= temperature %>&deg</h2>
+          </div>
+          <div class="max-temp">
+            <p>H:<%= tempMax %>&deg</p>
+          </div>
+          <div class="min-temp">
+            <p>L:<%= tempMin %>&deg</p>
+          </div>
+        </div>
+        <div class="weather-detailed-info">
+          <div class="feels-like-info bg-blur">
+            <h3 class="text-ac"><%= feelsLike %>&deg</h3>
+            <p class="text-ac">Feels Like</p>
+          </div>
+          <div class="humidity-info bg-blur">
+            <h3 class="text-ac"><%= humidity %>%</h3>
+            <p class="text-ac">Humidity</p>
+          </div>
+          <div class="weather-info bg-blur">
+            <div class="weather-icon">
+              <img src="<%= icon %>" alt="" />
+            </div>
+            <p class="text-ac"><%= weatherDescr %></p>
+          </div>
+          <div class="wind-info bg-blur">
+            <h3 class="wi-1 text-ac"><%= wind %></h3>
+            <p class="wi-2 text-ac">mph</p>
+            <h4 class="wi-3 text-ac">wind</h4>
+            <h3 class="wi-4 text-ac"><%= gusts %></h3>
+            <p class="wi-5 text-ac">mph</p>
+            <h4 class="wi-6 text-ac">gusts</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <script src="/Weather App v1/app.js"></script>
+    </footer>
+  </body>
+</html>
