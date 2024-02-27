@@ -2,6 +2,8 @@
 
 Weather App using OpenWeatherMap API 
 
+![weather-app-interface-cover](https://github.com/danieldd00/Weather-App/assets/156273935/f8e797b0-47f6-46bb-87c3-c79aa85a39f4)
+
 ## Description
 
 A weather interface to find the temperature and simple current weather data anywhere in the united states by zip code. When entering in your zip code the API provides latitude and longitude coordinates in which are placed into a different API call to get all current weather data for the area you specified.
