@@ -7,7 +7,7 @@ const port = 3000;
 const zipAPI_URL = "http://api.openweathermap.org/geo/1.0/zip";
 const weatherAPI_URL = "https://api.openweathermap.org/data/2.5/weather";
 const weatherIcon_URL = "https://openweathermap.org/img/wn/";
-const API_Key = "916e40435b01c05c5cd6f1b200bb4e09";
+const API_Key = "Grab an API Key from openweathermap.org";
 const units = "imperial";
 
 app.use(express.static("public"));
